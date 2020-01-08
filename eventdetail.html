@@ -1,0 +1,384 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+  <style>
+
+.cardbody
+{
+  margin-bottom: 100px;
+  margin-top: 160px;
+}
+#headingbar
+{
+  z-index: 1;
+  background-color: #fff;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   display: block;
+   transition: top 0.4s;
+
+
+}
+
+.btn{
+
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1em 0.8em;
+  height: 3em;
+  width: 3em;
+  line-height: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  vertical-align: middle;
+  background: transparent;
+  border-radius: 50px;
+  transition: all 300ms ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.025);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+
+}
+.btn::-moz-focus-inner {
+  border: 0;
+}
+.btn:hover, .btn:focus {
+
+  background-color: rgba(0, 0, 0, 0.025);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px, rgba(0, 0, 0, 0.3) 0 2px 6px;
+}
+.btn:active {
+  box-shadow: #eee;
+}
+.btn[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.btn__block {
+  width: 100%;
+}
+.btn__default, .btn__primary, .btn__accent {
+  background-color: rgba(0, 0, 0, 0.025);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.btn__default:hover, .btn__primary:hover, .btn__accent:hover, .btn__default:focus, .btn__primary:focus, .btn__accent:focus {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px, rgba(0, 0, 0, 0.3) 0 2px 6px;
+}
+.btn__default:active, .btn__primary:active, .btn__accent:active {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.btn__primary {
+  color: white;
+  background-color: #455A64;
+}
+.btn__primary:hover, .btn__primary:focus, .btn__primary:active {
+  background-color: #455A64;
+}
+.btn__accent {
+  color: white;
+  background-color: #0097A7;
+}
+.btn__accent:hover, .btn__accent:focus, .btn__accent:active {
+  background-color: #0097A7;
+}
+.btn__icon {
+  position: fixed;
+  top: 5%;
+  left:90%;
+  transform: translate3d(-50%, -50%, 0);
+  height: 3em;
+  width: 3em;
+  border-radius: 50px;
+  color:#0277bd;
+}
+
+.btn--icon {
+  pointer-events: none;
+}
+.btn--icon ~ .btn--text {
+  margin-left: 1em;
+}
+
+.btn--text {
+  pointer-events: none;
+}
+
+
+  #navbar{
+
+    height: 100px;
+    width: 100%;
+
+position: fixed;
+transition: bottom 0.5s;
+    bottom: 0;
+    	border: 1px solid #ccc;
+z-index: 1;
+  padding: 0;
+
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+color: black;
+background: #fff;
+
+
+
+
+}
+  ul{
+    height: auto;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	-webkit-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+.nav-item a
+{
+    color: black;
+   text-decoration: none;
+}
+
+.nav-item{
+
+  padding: 10px;
+	display: inline-block;
+	padding: 18px;
+	font-size: 1.4em;
+	-webkit-transition: background .5s;
+	transition: background .5s
+}
+
+.active{
+
+  border-top: 2px solid #0277bd;
+
+
+
+}
+.carddy {
+
+  margin: 35px auto;
+  max-width: 350px;
+  overflow: hidden;
+  background-color: #efefef;
+  border-radius:15px;
+  box-shadow: 0 2px 5px -1px rgba(0,0,0,0.3);
+}
+.carddynodefault {
+
+  margin: 35px auto;
+  max-width: 500px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius:0px;
+
+}
+
+
+.carddy .carddy-body {
+  margin: 15px;
+
+}
+.carddy-header
+{
+  width: 100%;
+  max-height: 300px;
+}
+.carddy-header img
+{
+
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+
+}
+body
+{
+  margin:0;
+  padding: 0;
+}
+header
+{
+  margin: 40px 40px;
+  padding:0;
+}
+header h6
+{
+  color: #9e9e9e;
+}
+.row
+{
+  padding: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div id="myDIV">
+  <div id="navbar">
+
+
+        <ul>
+            <li class="nav-item active"><a href="index.html" ><img src="../Raw/icon/home.png"></a></li>
+            <li class="nav-item"><a href="search.html" ><img src="../Raw/icon/search.png"></a></li>
+            <li class="nav-item"><a href="create.html"><img src="../Raw/icon/create.png"></a></li>
+            <li class="nav-item"><a href="notification.html" ><img src="../Raw/icon/noti.png"></a></li>
+            <li class="nav-item"><a href="profile.html" ><img src="../Raw/icon/profile.png"></a></li>
+
+        </ul>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+  <!-- Navigation -->
+
+  <!-- Header -->
+  <div id="headingbar">
+  <header>
+
+          <h1>Event Details</h1>
+
+
+
+  </header>
+</div>
+
+<div class="cardbody">
+
+
+<div class="carddynodefault">
+  <div class="carddy-header">
+      <img src="../Raw/image/dog.jpg">
+  </div>
+  <br>
+  <div class="container-fluid">
+      <h3>Hello World!</h3>
+      <p>By bruce</p>
+      <div class="row">
+            <div class="col-8" style="background-color:#fff;">
+                <button class="btn" ><div class="btn--icon"><i class="material-icons">favorite_border</i></div></button>
+                <spn>&nbsp;</spn>
+                <button class="btn" ><div class="btn--icon"><i class="material-icons">calendar_today</i></div></button></div>
+                <div class="col-4" style="background-color:#fff; color:#4caf50;"><br>Get Tickets</div>
+            </div>
+  </div>
+<br>
+
+</div>
+<div class="carddy carddy-default">
+
+  <div class="container-fluid">
+    <br>  <h3>About this event</h3>
+      <p>A whole new level of intelligence. The A12 Bionic, with our next-generation Neural Engine, delivers incredible performance. It uses real-time machine learning to transform the way you experience photos, gaming, augmented reality, and more. Apple-designed CPU. Two performance cores tackle heavy computational tasks. And four efficiency cores take on everyday tasks. Our newest performance controller dynamically divides work across these cores, harnessing all six when a power boost is needed. 2 performance cores Up to 15% faster than A11 Bionic 4 efficiency cores Up to 50% lower power usage than A11 Bionic</p>
+
+      <div class="row">
+            <div class="col-6" >
+              <b>Location</b>
+              <p>MICT Park Main Building
+              Myanmar ICT Park. Universities' Hlaing Campus, Hlaing Township, Yangon. Yangon Yangon Myanmar</p>
+            </div>
+            <div class="col-6" >
+              <b>Date and Time</b>
+              <p>Sat, August 3, 2019 1:00:00 PM to 4:00:00 PM</p>
+            </div>
+      </div>
+
+      </div>
+<div id="googleMap" style="width:100%;height:400px;"></div>
+</div>
+
+
+  </div>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <!-- <footer class="py-5 bg-dark">
+
+    <!-- /.container -->
+  <!-- </footer> -->
+
+  <!-- Bootstrap core JavaScript -->
+
+  <script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("nav-item");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
+  </script>
+  <script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+</body>
+
+</html>

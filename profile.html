@@ -1,0 +1,609 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+  <style>
+
+.cardbody
+{
+  width: 400px;
+  height: 400px;
+  background: red;
+  margin-bottom: 100px;
+  margin-top: 160px;
+}
+#headingbar
+{
+  background-color: #fff;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   display: block;
+   transition: top 0.4s;
+
+
+}
+  #navbar{
+    height: 100px;
+    width: 100%;
+position: fixed;
+transition: bottom 0.5s;
+    bottom: 0;
+    	border: 1px solid #ccc;
+
+  padding: 0;
+
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+color: black;
+background: #fff;
+
+
+
+
+}
+  ul{
+    height: auto;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	-webkit-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+.nav-item a
+{
+    color: black;
+   text-decoration: none;
+}
+
+.nav-item{
+
+	display: inline-block;
+	padding: 18px;
+	font-size: 1.4em;
+	-webkit-transition: background .5s;
+	transition: background .5s
+}
+.nav-item:hover{
+
+
+	cursor: pointer;
+}
+.carddy {
+  margin: 35px auto;
+  max-width: 300px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius:10px;
+  box-shadow: 0 2px 5px -1px rgba(0,0,0,0.3);
+}
+.carddy .carddy-header {
+  background-image: url("http://i.imgur.com/aBayW5C.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  padding: 5px 15px;
+}
+.carddy .carddy-body {
+  margin: 15px;
+  color: rgba(0,0,0,0.65);
+}
+body
+{
+  margin:0;
+  padding: 0;
+}
+header
+{
+  margin: 40px 40px;
+  padding:0;
+}
+form {
+
+  margin: 140px auto;
+  width: 80%;
+  overflow: hidden;
+  background: #fff;
+
+
+
+}
+
+
+form input {
+    border-radius:20px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #eee;
+  width: 100%;
+  border: 0;
+  margin: 0 0 1px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+
+.active{
+
+  border-top: 2px solid #0277bd;
+}
+.listgroup-flush
+{
+  width: 100px;
+}
+
+.container
+{
+  margin-bottom: 100px;
+  margin-top: 160px;
+}
+.list-group-item-action:hover
+{
+
+  background: #eee;
+}
+.modal {
+
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+ /* Enable scroll if needed */
+background-color:rgba(255,255,255,0.8); /* Black w/ opacity */
+}
+.modal-content {
+  border: none;
+  text-align: left;
+  background-color: #f1f1f1;
+  border-radius:10px;
+  box-shadow: 0 2px 5px -1px rgba(0,0,0,0.3);
+  overflow: scroll;
+  width: 355px;
+  height: 600px;
+  margin: auto;
+  padding: 20px;
+
+
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  text-align: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+hr {
+
+          width: 30%;
+           height: 3px;
+           background: #000;
+
+       }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+
+
+        <ul>
+            <li class="nav-item"><a href="index.html" ><img src="../Raw/icon/home.png"></a></li>
+            <li class="nav-item"><a href="search.html" ><img src="../Raw/icon/search.png"></a></li>
+            <li class="nav-item"><a href="create.html"><img src="../Raw/icon/create.png"></a></li>
+            <li class="nav-item"><a href="notification.html" ><img src="../Raw/icon/noti.png"></a></li>
+            <li class="nav-item active"><a href="profile.html" ><img src="../Raw/icon/profile.png"></a></li>
+
+        </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- Navigation -->
+
+  <!-- Header -->
+  <div id="headingbar">
+  <header>
+
+          <h1 style="color:#0277bd;">Profile</h1>
+
+
+
+  </header>
+</div>
+
+<div class="container">
+  <div class="list-group list-group-flush">
+    <a href="#" class="list-group-item list-group-item-action" id="id01">Edit Profile</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id02">Your Tags</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id03">Interested Events</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id04">Going Events</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id05">Your Locations</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id06">Your Events</a>
+    <a href="#" class="list-group-item list-group-item-action" id="id07">Settings</a>
+    <a href="register.html" class="list-group-item list-group-item-action" >Logout</a>
+  </div>
+</div>
+
+    <div id="id01modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>Edit Profile</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+    <div id="id02modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>My Tags</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+    <div id="id03modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>Interested Events</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+
+    <div id="id04modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>Going Events</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+
+    <div id="id05modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>My Locations</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+
+    <div id="id06modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>My Events</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+
+    <div id="id07modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h3>Settings</h3>
+        <br>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <span class="close"><br>&#x2715;</span>
+
+      </div>
+
+    </div>
+
+
+
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+
+
+<script>
+// Get the modal
+var modal1 = document.getElementById("id01modal");
+
+// Get the button that opens the modal
+var id01 = document.getElementById("id01");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+id01.onclick = function() {
+  modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+</script>
+
+<script>
+// Get the modal
+var modal2 = document.getElementById("id02modal");
+
+// Get the button that opens the modal
+var id02 = document.getElementById("id02");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close")[1];
+
+// When the user clicks the button, open the modal
+id02.onclick = function() {
+  modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+
+
+<script>
+// Get the modal
+var modal3 = document.getElementById("id03modal");
+
+// Get the button that opens the modal
+var id03 = document.getElementById("id03");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close")[2];
+
+// When the user clicks the button, open the modal
+id03.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+</script>
+
+
+
+<script>
+// Get the modal
+var modal4 = document.getElementById("id04modal");
+
+// Get the button that opens the modal
+var id04 = document.getElementById("id04");
+
+// Get the <span> element that closes the modal
+var span4 = document.getElementsByClassName("close")[3];
+
+// When the user clicks the button, open the modal
+id04.onclick = function() {
+  modal4.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+</script>
+
+
+
+<script>
+// Get the modal
+var modal5 = document.getElementById("id05modal");
+
+// Get the button that opens the modal
+var id05 = document.getElementById("id05");
+
+// Get the <span> element that closes the modal
+var span5 = document.getElementsByClassName("close")[4];
+
+// When the user clicks the button, open the modal
+id05.onclick = function() {
+  modal5.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span5.onclick = function() {
+  modal5.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal5) {
+    modal5.style.display = "none";
+  }
+}
+</script>
+
+
+
+<script>
+// Get the modal
+var modal6 = document.getElementById("id06modal");
+
+// Get the button that opens the modal
+var id06 = document.getElementById("id06");
+
+// Get the <span> element that closes the modal
+var span6 = document.getElementsByClassName("close")[5];
+
+// When the user clicks the button, open the modal
+id06.onclick = function() {
+  modal6.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span6.onclick = function() {
+  modal6.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal6) {
+    modal6.style.display = "none";
+  }
+}
+</script>
+
+
+
+<script>
+// Get the modal
+var modal7 = document.getElementById("id07modal");
+
+// Get the button that opens the modal
+var id07 = document.getElementById("id07");
+
+// Get the <span> element that closes the modal
+var span7 = document.getElementsByClassName("close")[6];
+
+// When the user clicks the button, open the modal
+id07.onclick = function() {
+  modal7.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span7.onclick = function() {
+  modal7.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal7) {
+    modal7.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+  <!-- Footer -->
+  <!-- <footer class="py-5 bg-dark">
+
+    <!-- /.container -->
+  <!-- </footer> -->
+
+  <!-- Bootstrap core JavaScript -->
+
+
+</body>
+
+</html>
